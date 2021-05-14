@@ -1,0 +1,13 @@
+flag:
+
+Flag1? This flag can be found at the system root. 
+--> flag{access_the_machine}
+
+Flag2? This flag can be found at the location where passwords are stored within Windows.
+-->
+
+*Errata: Windows really doesn't like the location of this flag and can occasionally delete it. It may be necessary in some cases to terminate/restart the machine and rerun the exploit to find this flag. This relatively rare, however, it can happen. 
+Flag3? This flag can be found in an excellent location to loot. After all, Administrators usually have pretty interesting things saved. 
+-->
+
+*/............................................................................................................................................./*
